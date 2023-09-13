@@ -15,10 +15,12 @@ import EmailIcon from "@mui/icons-material/Email";
 import PointOfSaleIcon from "@mui/icons-material/PointOfSale";
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import TrafficIcon from "@mui/icons-material/Traffic";
-import { Header, StatBox } from '../ui-components/dashboard';
+import { StatBox } from '../ui-components/dashboard';
 import LineChart from '../components/LineChart';
 import ProgressCircle from '../components/ProgressCircle';
 import PieChart from '../components/PieChart';
+import Team from '../ui-components/team';
+import Header from '../components/Header';
 //   import LineChart from "../../components/LineChart";
 //   import GeographyChart from "../../components/GeographyChart";
 //   import BarChart from "../../components/BarChart";
@@ -247,7 +249,7 @@ const Dashboard = () => {
                         <Typography variant="h5" fontWeight="600">
                             Campaign
                         </Typography>
-                        <Box height="295px" m="-20px 0 0 0">
+                        <Box height="395px" m="-20px 0 0 0">
                             <PieChart isDashboard={true} />
                         </Box>
                     </Box>
@@ -260,55 +262,15 @@ const Dashboard = () => {
                         overflow="auto"
 
                     >
-                        <Box
-                            display="flex"
-                            justifyContent="space-between"
-                            alignItems="center"
-                            borderBottom={`4px solid ${colors.primary[500]}`}
-                            color={colors.grey[100]}
-                            p="15px"
-                        >
-                            <Typography
-                                variant="h5"
-                                fontWeight="600"
-                                color={colors.grey[100]}
-                            >
-                                Resent Transaction
+                        <Box backgroundColor={colors.primary[400]}>
+                            <Typography variant="h5" fontWeight="600"  p="30px 0 0 30px">
+                                Campaign
                             </Typography>
+                            <Box>
+                                <Team />
+                            </Box>
                         </Box>
-                        {mockTransactions.map((transaction, i) => {
-                            return (
-                                <Box
-                                    key={`${transaction}-${i}`}
-                                    display="flex"
-                                    justifyContent="space-between"
-                                    alignItems="center"
-                                    borderBottom={`4px solid ${colors.primary[500]}`}
-                                    p="15px"
-                                >
-                                    <Box>
-                                        <Typography
-                                            variant="h5"
-                                            fontWeight="600"
-                                            color={colors.greenAccent[100]}
-                                        >
-                                            {transaction.txId}
-                                        </Typography>
-                                        <Typography color={colors.grey[100]}>
-                                            {transaction.user}
-                                        </Typography>
-                                    </Box>
-                                    <Box color={colors.grey[100]}>{transaction.date}</Box>
-                                    <Box
-                                        color={colors.greenAccent[500]}
-                                        p="5px 10px"
-                                        borderRadius="4px"
-                                    >
-                                        ${transaction.cost}
-                                    </Box>
-                                </Box>
-                            );
-                        })}
+
                     </Box>
                 </Grid>
             </Grid>
