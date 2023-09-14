@@ -48,13 +48,14 @@ const SubItem = ({ title, icon, selected, setSelected, subColection }) => {
         backgroundColor: colors.primary[300]
       }}
     >
-      {subColection.map(({ name, to }) => (
+      {subColection.map(({ name, to },idx) => (
         <MenuItem
           routerLink={<Link to={to} />}
           styles={{
             color: colors.grey[100],
             backgroundColor: colors.primary[300]
           }}
+          key={idx}
         >
           {" "}
           {name}
@@ -126,6 +127,7 @@ const MyProSidebar = () => {
         breakPoint="md"
         backgroundColor={colors.primary[400]}
         image={sidebarImage}
+        defaultCollapsed={true}
       >
         <Menu iconshape="square">
           <MenuItem
