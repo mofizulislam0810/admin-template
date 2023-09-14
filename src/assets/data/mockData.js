@@ -290,6 +290,12 @@ export const mockTransactions = [
     user: "goodmanave",
     date: "2022-11-05",
     cost: "200.95"
+  },
+  {
+    txId: "51034szv",
+    user: "goodmanave",
+    date: "2022-11-05",
+    cost: "200.95"
   }
 ];
 

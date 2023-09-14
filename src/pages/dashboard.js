@@ -21,10 +21,8 @@ import ProgressCircle from '../components/ProgressCircle';
 import PieChart from '../components/PieChart';
 import Team from '../ui-components/team';
 import Header from '../components/Header';
-//   import LineChart from "../../components/LineChart";
-//   import GeographyChart from "../../components/GeographyChart";
-//   import BarChart from "../../components/BarChart";
-//   import ProgressCircle from "../../components/ProgressCircle";
+
+
 const Dashboard = () => {
     const theme = useTheme();
     const smScreen = useMediaQuery(theme.breakpoints.up("sm"));
@@ -40,22 +38,7 @@ const Dashboard = () => {
                 alignItems={smScreen ? "center" : "start"}
                 m="10px 0"
             >
-                <Header title="DASHBOARD" subtitle="Welcome to your dashboard" />
-
-                <Box>
-                    <Button
-                        sx={{
-                            backgroundColor: colors.blueAccent[700],
-                            color: colors.grey[100],
-                            fontSize: "14px",
-                            fontWeight: "bold",
-                            padding: "10px 20px",
-                        }}
-                    >
-                        <DownloadOutlinedIcon sx={{ mr: "10px" }} />
-                        Download Reports
-                    </Button>
-                </Box>
+                <Header title="DASHBOARD" subtitle="Welcome to dashboard" />
             </Box>
 
             {/* GRID & CHARTS */}
@@ -156,11 +139,12 @@ const Dashboard = () => {
                             justifyContent="space-between"
                             alignItems="center"
                         >
-                            <Box>
+                            <Box p="30px 0 0 30px">
                                 <Typography
                                     variant="h5"
                                     fontWeight="600"
                                     color={colors.grey[100]}
+                                    
                                 >
                                     Revenue Generated
                                 </Typography>
@@ -180,7 +164,7 @@ const Dashboard = () => {
                                 </IconButton>
                             </Box>
                         </Box>
-                        <Box height="333px" m="-20px 0 0 0">
+                        <Box height="53vh" m="-20px 0 0 0">
                             <LineChart isDashboard={true} />
                         </Box>
                     </Box>
@@ -249,7 +233,7 @@ const Dashboard = () => {
                         <Typography variant="h5" fontWeight="600">
                             Campaign
                         </Typography>
-                        <Box height="395px" m="-20px 0 0 0">
+                        <Box height="55vh" m="-20px 0 0 0">
                             <PieChart isDashboard={true} />
                         </Box>
                     </Box>
@@ -264,13 +248,12 @@ const Dashboard = () => {
                     >
                         <Box backgroundColor={colors.primary[400]}>
                             <Typography variant="h5" fontWeight="600"  p="30px 0 0 30px">
-                                Campaign
+                                Users
                             </Typography>
                             <Box>
                                 <Team />
                             </Box>
                         </Box>
-
                     </Box>
                 </Grid>
             </Grid>

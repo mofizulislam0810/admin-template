@@ -6,7 +6,6 @@ import { mockDataTeam } from "../../assets/data/mockData";
 import AdminPanelSettingsOutlinedIcon from "@mui/icons-material/AdminPanelSettingsOutlined";
 import LockOpenOutlinedIcon from "@mui/icons-material/LockOpenOutlined";
 import SecurityOutlinedIcon from "@mui/icons-material/SecurityOutlined";
-import Header from "../../components/Header";
 
 const Team = () => {
   const theme = useTheme();
@@ -60,9 +59,6 @@ const Team = () => {
   ];
   return (
     <Box m="20px">
-      {/* <Box display="flex" justifyContent="space-between" alignItems="center">
-        <Header title="TEAM" subtitle="welcome to you Team" />
-      </Box> */}
       <Box
         m="8px 0 0 0"
         height="51vh"

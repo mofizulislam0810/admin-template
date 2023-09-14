@@ -15,18 +15,14 @@ export const MyProSidebarProvider = ({ children }) => {
         value={{
           sidebarBackgroundColor,
           setSidebarBackgroundColor,
-
           sidebarImage,
           setSidebarImage,
-
-          sidebarRTL,
-          setSidebarRTL,
         }}
       >
         <div
           style={{
             display: "flex",
-            flexDirection: sidebarRTL ? "row-reverse" : "row",
+            flexDirection: "row",
           }}
         >
           <MyProSidebar />
