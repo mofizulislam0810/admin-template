@@ -8,7 +8,6 @@ import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
-import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
 import SearchIcon from "@mui/icons-material/Search";
 import { useProSidebar } from "react-pro-sidebar";
 const Topbar = () => {
@@ -33,7 +32,7 @@ const Topbar = () => {
           <IconButton
             onClick={broken ? () => toggleSidebar() : () => collapseSidebar()}
           >
-            <CloseOutlinedIcon />
+             <MenuOutlinedIcon />
           </IconButton>
         )}
         <Box
@@ -66,6 +65,14 @@ const Topbar = () => {
         <IconButton>
           <PersonOutlinedIcon />
         </IconButton>
+        {/* {broken && rtl && (
+          <IconButton
+            sx={{ margin: "0 6 0 2" }}
+            onClick={() => toggleSidebar()}
+          >
+            <MenuOutlinedIcon />
+          </IconButton>
+        )} */}
       </Box>
     </Box>
   );
