@@ -1,4 +1,3 @@
-// docs https://github.com/azouaoui-med/react-pro-sidebar
 import { useState } from "react";
 import { Menu, Sidebar, MenuItem, SubMenu } from "react-pro-sidebar";
 import { useProSidebar } from "react-pro-sidebar";
