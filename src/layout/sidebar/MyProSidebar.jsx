@@ -9,13 +9,11 @@ import { Link } from "react-router-dom";
 import { tokens } from "../../utils/theme";
 import { useTheme, Box, Typography } from "@mui/material";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
-import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
 import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
 import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
 import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
-import BarChartOutlinedIcon from "@mui/icons-material/BarChartOutlined";
 import AcuityLogo from "../../assets/data/acuityLogo";
 
 const Item = ({ title, to, icon, selected, setSelected }) => {

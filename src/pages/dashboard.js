@@ -1,7 +1,6 @@
 import React from 'react'
 import {
     Box,
-    Button,
     IconButton,
     Typography,
     useTheme,
@@ -17,7 +16,6 @@ import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import TrafficIcon from "@mui/icons-material/Traffic";
 import { StatBox } from '../ui-components/dashboard';
 import LineChart from '../components/LineChart';
-import ProgressCircle from '../components/ProgressCircle';
 import PieChart from '../components/PieChart';
 import Team from '../ui-components/team';
 import Header from '../components/Header';

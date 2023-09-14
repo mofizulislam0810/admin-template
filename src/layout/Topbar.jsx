@@ -20,20 +20,11 @@ const Topbar = () => {
     toggleSidebar,
     collapsed,
     broken,
-    rtl
   } = useProSidebar();
 
   return (
     <Box display="flex" justifyContent="space-between" p={2}>
       <Box display="flex">
-        {/* {broken && !rtl && (
-          <IconButton
-            sx={{ margin: "0 6 0 2" }}
-            onClick={() => toggleSidebar()}
-          >
-            <MenuOutlinedIcon />
-          </IconButton>
-        )} */}
         {collapsed ? (
           <IconButton onClick={() => collapseSidebar()}>
             <MenuOutlinedIcon />
@@ -75,14 +66,6 @@ const Topbar = () => {
         <IconButton>
           <PersonOutlinedIcon />
         </IconButton>
-        {/* {broken && rtl && (
-          <IconButton
-            sx={{ margin: "0 6 0 2" }}
-            onClick={() => toggleSidebar()}
-          >
-            <MenuOutlinedIcon />
-          </IconButton>
-        )} */}
       </Box>
     </Box>
   );
